@@ -56,7 +56,7 @@ class Solution:
                 et.append(i[1])
 
             max = 0
-            fin = []
+            fin = [()]
             for i in range(0, len(st)):
                 cur = i
                 num = 0
