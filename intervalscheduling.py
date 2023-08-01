@@ -49,7 +49,7 @@ class Solution:
             et = []
             for i in range(len(intervals)):
                 for j in range(i, len(intervals)):
-                    if(intervals[i][0] > intervals[j][0]):
+                    if(intervals[i][1] > intervals[j][1]):
                         temp = intervals[i]
                         intervals[i] = intervals[j]
                         intervals[j] = temp
@@ -69,6 +69,9 @@ class Solution:
                         cur = j
                         num += 1
                         temp.append((st[j], et[j]))
+                if i == 0:
+                    for i in temp:
+                        fin.append(i)
                 if num > max:
                     max = num
                     for i in temp:
