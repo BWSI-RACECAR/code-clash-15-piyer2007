@@ -65,7 +65,7 @@ class Solution:
                     if(st[j] > et[cur]):
                         cur = j
                         num += 1
-                        fin.append(st[j], et[j])
+                        fin.append((st[j], et[j]))
                 if num > max:
                     max = num
 
