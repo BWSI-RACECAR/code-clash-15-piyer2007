@@ -56,19 +56,21 @@ class Solution:
                 et.append(i[1])
 
             max = 0
-            fin = [()]
+            fin = []
+            temp = []
             for i in range(0, len(st)):
                 cur = i
                 num = 0
-                fin.append((st[i], et[i]))
+                temp.append((st[i], et[i]))
                 for j in range(1, len(st)):
                     if(st[j] > et[cur]):
                         cur = j
                         num += 1
-                        fin.append((st[j], et[j]))
+                        temp.append((st[j], et[j]))
                 if num > max:
                     max = num
-
+                    fin = temp
+                temp.clear()
             return fin
 
 
