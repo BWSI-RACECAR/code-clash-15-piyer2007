@@ -60,7 +60,7 @@ class Solution:
             for i in range(0, len(st)):
                 cur = i
                 num = 0
-                fin.append(st[i], et[i])
+                fin.append((st[i], et[i]))
                 for j in range(1, len(st)):
                     if(st[j] > et[cur]):
                         cur = j
