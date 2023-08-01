@@ -63,7 +63,7 @@ class Solution:
                 num = 0
                 temp.append((st[i], et[i]))
                 for j in range(1, len(st)):
-                    if(st[j] > et[cur]):
+                    if(st[j] >= et[cur]):
                         cur = j
                         num += 1
                         temp.append((st[j], et[j]))
