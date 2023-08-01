@@ -44,7 +44,7 @@ class Solution:
             st = []
             et = []
             for i in range(len(intervals)):
-                for j in range(i, len(intervals):
+                for j in range(i, len(intervals)):
                     if(intervals[i][0] > intervals[j][0]):
                         temp = intervals[i]
                         intervals[i] = intervals[j]
