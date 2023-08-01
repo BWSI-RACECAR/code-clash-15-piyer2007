@@ -43,6 +43,8 @@ class Solution:
             #TODO: Write code below to return an int tuples list with the solution to the prompt.
             if(len(intervals) == 0):
                 return 0
+            if(len(intervals) == 1):
+                return intervals
             st = []
             et = []
             for i in range(len(intervals)):
