@@ -69,7 +69,8 @@ class Solution:
                         temp.append((st[j], et[j]))
                 if num > max:
                     max = num
-                    fin = temp
+                    for i in temp:
+                        fin.append(i)
                 temp.clear()
             return fin
 
