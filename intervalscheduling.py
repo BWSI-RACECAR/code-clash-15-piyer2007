@@ -73,6 +73,7 @@ class Solution:
                     for i in temp:
                         fin.append(i)
                 if num > max:
+                    fin.clear()
                     max = num
                     for i in temp:
                         fin.append(i)
