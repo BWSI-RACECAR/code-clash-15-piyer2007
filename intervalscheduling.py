@@ -41,6 +41,8 @@ class Solution:
             #return type: list of int tuples
 
             #TODO: Write code below to return an int tuples list with the solution to the prompt.
+            if(len(intervals) == 0):
+                return 0
             st = []
             et = []
             for i in range(len(intervals)):
@@ -54,18 +56,20 @@ class Solution:
                 et.append(i[1])
 
             max = 0
-
-            for i in range(1, len(st)):
+            fin = []
+            for i in range(0, len(st)):
                 cur = i
                 num = 0
+                fin.append(st[i], et[i])
                 for j in range(1, len(st)):
-                    if(st[cur] > et[cur-1]):
-                        cur += 1
+                    if(st[j] > et[cur]):
+                        cur = j
                         num += 1
+                        fin.append(st[j], et[j])
                 if num > max:
                     max = num
 
-            return max
+            return fin
 
 
 
